@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>KG Fitness - Exercise Library</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="exercises.css">
+</head>
+
+<body>
+
+    <header class="exercise-header">
+
+        <div class="header-left">
+            <button
+                type="button"
+                class="back-btn"
+                id="backDashboardBtn"
+            >
+                ← BACK TO DASHBOARD
+            </button>
+        </div>
+
+        <div class="header-title">
+            <span class="header-logo">KG</span>
+
+            <div>
+                <h1>Exercise Library</h1>
+                <p>Learn how to perform exercises correctly.</p>
+            </div>
+        </div>
+
+    </header>
+
+
+    <main class="exercise-container">
+
+        <section class="library-intro">
+
+            <span class="section-label">
+                KG FITNESS
+            </span>
+
+            <h2>Exercise Guidance</h2>
+
+            <p>
+                Explore exercises by muscle group and learn the correct
+                technique with simple Step 1 and Step 2 instructions.
+            </p>
+
+        </section>
+
+
+        <section class="search-section">
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="exerciseSearch"
+                    placeholder="Search exercises..."
+                    autocomplete="off"
+                >
+
+                <button
+                    type="button"
+                    id="searchExerciseBtn"
+                >
+                    SEARCH
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <section class="filter-section">
+
+            <button
+                type="button"
+                class="filter-btn active"
+                data-muscle="all"
+            >
+                ALL
+            </button>
+
+            <button
+                type="button"
+                class="filter-btn"
+                data-muscle="chest"
+            >
+                CHEST
+            </button>
+
+            <button
+                type="button"
+                class="filter-btn"
+                data-muscle="back"
+            >
+                BACK
+            </button>
+
+            <button
+                type="button"
+                class="filter-btn"
+                data-muscle="shoulders"
+            >
+                SHOULDERS
+            </button>
+
+            <button
+                type="button"
+                class="filter-btn"
+                data-muscle="arms"
+            >
+                ARMS
+            </button>
+
+            <button
+                type="button"
+                class="filter-btn"
+                data-muscle="legs"
+            >
+                LEGS
+            </button>
+
+            <button
+                type="button"
+                class="filter-btn"
+                data-muscle="cardio"
+            >
+                CARDIO
+            </button>
+
+        </section>
+
+
+        <div class="library-status">
+
+            <span id="exerciseCount">
+                0 exercises
+            </span>
+
+        </div>
+
+
+        <section
+            class="exercise-grid"
+            id="exerciseGrid"
+        >
+        </section>
+
+
+        <section
+            class="no-results"
+            id="noResults"
+            hidden
+        >
+
+            <div class="no-results-icon">
+                🔎
+            </div>
+
+            <h3>No exercises found</h3>
+
+            <p>
+                Try another exercise name or muscle group.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <div
+        class="exercise-modal"
+        id="exerciseModal"
+        hidden
+    >
+
+        <div
+            class="modal-overlay"
+            id="modalOverlay"
+        ></div>
+
+        <div class="modal-content">
+
+            <button
+                type="button"
+                class="modal-close"
+                id="closeExerciseModal"
+                aria-label="Close"
+            >
+                ×
+            </button>
+
+            <div id="exerciseModalContent">
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script type="module" src="exercises.js"></script>
+
+</body>
+</html>

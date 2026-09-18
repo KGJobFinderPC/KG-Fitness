@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>KG Fitness - My Progress</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="progress.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="brand">
+
+            <div class="brand-logo">
+                KG
+            </div>
+
+            <div class="brand-text">
+                <span>KG</span>
+                <strong>FITNESS</strong>
+            </div>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <a
+                href="dashboard.html"
+                class="nav-item"
+            >
+                <span class="nav-icon">
+                    ⌂
+                </span>
+
+                <span>
+                    Dashboard
+                </span>
+            </a>
+
+
+            <a
+                href="workout.html"
+                class="nav-item"
+            >
+                <span class="nav-icon">
+                    💪
+                </span>
+
+                <span>
+                    Workout
+                </span>
+            </a>
+
+
+            <a
+                href="nutrition.html"
+                class="nav-item"
+            >
+                <span class="nav-icon">
+                    🥗
+                </span>
+
+                <span>
+                    Nutrition
+                </span>
+            </a>
+
+
+            <a
+                href="progress.html"
+                class="nav-item active"
+            >
+                <span class="nav-icon">
+                    📈
+                </span>
+
+                <span>
+                    My Progress
+                </span>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <button
+                id="logoutBtn"
+                class="logout-btn"
+            >
+                <span class="nav-icon">
+                    ↪
+                </span>
+
+                <span>
+                    Logout
+                </span>
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+
+            <div>
+
+                <span class="topbar-label">
+                    KG FITNESS
+                </span>
+
+                <h1>
+                    My Progress
+                </h1>
+
+                <p id="welcomeText">
+                    Track your progress and stay consistent.
+                </p>
+
+            </div>
+
+
+            <div class="user-info">
+
+                <div
+                    class="user-avatar"
+                    id="userAvatar"
+                >
+                    K
+                </div>
+
+
+                <div class="user-details">
+
+                    <strong id="userName">
+                        User
+                    </strong>
+
+                    <span id="userGoal">
+                        Fitness Journey
+                    </span>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- PROGRESS HERO -->
+        <section class="progress-hero">
+
+            <div class="progress-hero-content">
+
+                <span class="section-label">
+                    90 DAY PROGRAM
+                </span>
+
+                <h2>
+                    Your Progress
+                </h2>
+
+                <p>
+                    Keep training, stay consistent and become
+                    stronger every day.
+                </p>
+
+            </div>
+
+
+            <div class="hero-day">
+
+                <span>
+                    DAY
+                </span>
+
+                <strong id="heroCurrentDay">
+                    1
+                </strong>
+
+                <small>
+                    OF 90
+                </small>
+
+            </div>
+
+        </section>
+
+
+        <!-- OVERVIEW -->
+        <section class="section-block">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="section-label">
+                        OVERVIEW
+                    </span>
+
+                    <h2>
+                        Your Statistics
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        📅
+                    </div>
+
+                    <div class="stat-content">
+
+                        <span>
+                            CURRENT DAY
+                        </span>
+
+                        <strong id="currentDay">
+                            1
+                        </strong>
+
+                        <small>
+                            of 90 days
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        ✅
+                    </div>
+
+                    <div class="stat-content">
+
+                        <span>
+                            WORKOUTS COMPLETED
+                        </span>
+
+                        <strong id="workoutsCompleted">
+                            0
+                        </strong>
+
+                        <small>
+                            completed workouts
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        🔥
+                    </div>
+
+                    <div class="stat-content">
+
+                        <span>
+                            CURRENT STREAK
+                        </span>
+
+                        <strong id="currentStreak">
+                            0
+                        </strong>
+
+                        <small>
+                            days in a row
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        📊
+                    </div>
+
+                    <div class="stat-content">
+
+                        <span>
+                            COMPLETION
+                        </span>
+
+                        <strong id="completionPercent">
+                            0%
+                        </strong>
+
+                        <small>
+                            program progress
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- 90 DAY PROGRESS -->
+        <section class="section-block">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="section-label">
+                        PROGRAM PROGRESS
+                    </span>
+
+                    <h2>
+                        90 Day Journey
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="progress-card">
+
+                <div class="progress-card-top">
+
+                    <div>
+
+                        <span>
+                            PROGRAM COMPLETION
+                        </span>
+
+                        <strong id="progressPercentage">
+                            0%
+                        </strong>
+
+                    </div>
+
+
+                    <div class="progress-days">
+
+                        <strong id="progressDayText">
+                            Day 1 / 90
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="progress-bar">
+
+                    <div
+                        class="progress-bar-fill"
+                        id="progressBarFill"
+                        style="width: 0%;"
+                    ></div>
+
+                </div>
+
+
+                <div class="progress-bar-bottom">
+
+                    <span>
+                        Day 1
+                    </span>
+
+                    <span>
+                        Day 90
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- WORKOUT PROGRESS -->
+        <section class="section-block">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="section-label">
+                        WORKOUT
+                    </span>
+
+                    <h2>
+                        Workout Progress
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="workout-progress-card">
+
+                <div class="workout-progress-icon">
+                    💪
+                </div>
+
+                <div class="workout-progress-content">
+
+                    <h3>
+                        Keep pushing forward
+                    </h3>
+
+                    <p id="workoutProgressText">
+                        Complete your workouts to build your progress.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PERSONAL RECORDS -->
+        <section class="section-block">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="section-label">
+                        PERSONAL RECORDS
+                    </span>
+
+                    <h2>
+                        Your Best Results
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="records-grid"
+                id="personalRecordsGrid"
+            >
+                <!-- PERSONAL RECORDS ARE LOADED AUTOMATICALLY -->
+            </div>
+
+        </section>
+
+
+        <!-- MOTIVATION -->
+        <section class="motivation-card">
+
+            <div class="motivation-icon">
+                🔥
+            </div>
+
+            <div>
+
+                <span class="section-label">
+                    KEEP GOING
+                </span>
+
+                <h2>
+                    Consistency creates results.
+                </h2>
+
+                <p>
+                    Every completed workout takes you one step
+                    closer to your goal.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer class="footer">
+
+            <p>
+                © 2026 KG Fitness. All rights reserved.
+            </p>
+
+        </footer>
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+    <script
+        type="module"
+        src="progress.js?v=2"
+    ></script>
+
+</body>
+</html>

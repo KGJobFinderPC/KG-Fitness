@@ -1,0 +1,568 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #080b14;
+    color: #ffffff;
+}
+
+
+/* =========================
+   CREATE ACCOUNT PAGE
+========================= */
+
+.register-page {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 560px 1fr;
+    background: #080b14;
+}
+
+
+/* =========================
+   FITNESS SIDE IMAGES
+========================= */
+
+.register-side {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    padding: 55px;
+
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: #080b14;
+}
+
+.left-side {
+    background-image:
+        linear-gradient(
+            rgba(8, 11, 20, 0.25),
+            rgba(8, 11, 20, 0.82)
+        ),
+        url("images/fitness-left.jpg");
+}
+
+.right-side {
+    background-image:
+        linear-gradient(
+            rgba(8, 11, 20, 0.25),
+            rgba(8, 11, 20, 0.82)
+        ),
+        url("images/fitness-right.jpg");
+}
+
+.image-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(111, 55, 180, 0.12),
+            rgba(255, 216, 77, 0.08)
+        );
+    pointer-events: none;
+}
+
+.side-content {
+    position: relative;
+    z-index: 2;
+    max-width: 390px;
+}
+
+.side-content span {
+    color: #ffd84d;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.side-content h2 {
+    margin-top: 12px;
+    font-size: 38px;
+    line-height: 1.1;
+    font-weight: 800;
+}
+
+.side-content p {
+    margin-top: 14px;
+    color: #d4d6dd;
+    font-size: 14px;
+}
+
+
+/* =========================
+   CENTER
+========================= */
+
+.register-center {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 35px 25px;
+
+    background:
+        radial-gradient(
+            circle at 50% 15%,
+            rgba(128, 61, 190, 0.14),
+            transparent 38%
+        ),
+        #080b14;
+}
+
+
+/* =========================
+   REGISTER CARD
+========================= */
+
+.register-card {
+    width: 100%;
+    max-width: 500px;
+    padding: 40px 38px;
+
+    border-radius: 24px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.075),
+            rgba(255, 255, 255, 0.025)
+        );
+
+    border: 1px solid rgba(255, 216, 77, 0.18);
+
+    box-shadow:
+        0 30px 90px rgba(0, 0, 0, 0.45),
+        0 0 45px rgba(107, 51, 170, 0.08);
+}
+
+
+/* =========================
+   BRAND
+========================= */
+
+.brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.brand-kg {
+    color: #ffd84d;
+    font-size: 42px;
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: -2px;
+}
+
+.brand-name {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.welcome {
+    margin-top: 25px;
+    text-align: center;
+
+    color: #ffd84d;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+}
+
+.register-card h1 {
+    margin-top: 8px;
+    text-align: center;
+
+    font-size: 29px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.register-description {
+    margin: 12px auto 28px;
+
+    max-width: 390px;
+
+    text-align: center;
+
+    color: #9197a7;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+#registerForm {
+    width: 100%;
+}
+
+.input-group {
+    margin-bottom: 17px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 7px;
+
+    color: #dfe1e7;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    height: 50px;
+
+    padding: 0 15px;
+
+    border: 1px solid rgba(255, 255, 255, 0.11);
+    border-radius: 11px;
+
+    outline: none;
+
+    background: rgba(0, 0, 0, 0.18);
+
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 13px;
+
+    transition: 0.3s;
+}
+
+.input-group input::placeholder {
+    color: #666d7c;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    border-color: #ffd84d;
+
+    box-shadow:
+        0 0 0 3px rgba(255, 216, 77, 0.08);
+}
+
+
+/* =========================
+   SELECT
+========================= */
+
+.input-group select {
+    cursor: pointer;
+}
+
+.input-group select option {
+    background: #111522;
+    color: #ffffff;
+}
+
+
+/* =========================
+   TWO COLUMNS
+========================= */
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+
+/* =========================
+   MESSAGE
+========================= */
+
+.register-message {
+    min-height: 20px;
+
+    margin: 4px 0 12px;
+
+    text-align: center;
+
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   CREATE ACCOUNT BUTTON
+========================= */
+
+.create-account-submit {
+    width: 100%;
+    height: 53px;
+
+    border: none;
+    border-radius: 11px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffd84d,
+            #d6a91d
+        );
+
+    color: #080b14;
+
+    font-family: inherit;
+
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.create-account-submit:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 14px 35px rgba(255, 216, 77, 0.18);
+}
+
+.create-account-submit:active {
+    transform: translateY(0);
+}
+
+
+/* =========================
+   DIVIDER
+========================= */
+
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    margin: 24px 0 18px;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+
+    flex: 1;
+
+    height: 1px;
+
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.divider span {
+    color: #626878;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+/* =========================
+   LOGIN BUTTON
+========================= */
+
+.login-btn {
+    width: 100%;
+    height: 48px;
+
+    border-radius: 10px;
+
+    border: 1px solid rgba(146, 73, 204, 0.6);
+
+    background:
+        linear-gradient(
+            135deg,
+            #7138a7,
+            #4c2675
+        );
+
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 30px rgba(113, 56, 167, 0.2);
+}
+
+
+/* =========================
+   BACK BUTTON
+========================= */
+
+.back-btn {
+    width: 100%;
+    height: 44px;
+
+    margin-top: 12px;
+
+    border: 1px solid rgba(255, 77, 77, 0.3);
+    border-radius: 10px;
+
+    background: rgba(180, 30, 30, 0.12);
+
+    color: #ff6b6b;
+
+    font-family: inherit;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background: rgba(200, 35, 35, 0.2);
+
+    border-color: #ff5c5c;
+
+    color: #ffffff;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1200px) {
+
+    .register-page {
+        grid-template-columns: 0.75fr 560px 0.75fr;
+    }
+
+    .register-side {
+        padding: 30px;
+    }
+
+    .side-content h2 {
+        font-size: 30px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 950px) {
+
+    .register-page {
+        grid-template-columns: 1fr;
+    }
+
+    .register-side {
+        display: none;
+    }
+
+    .register-center {
+        min-height: 100vh;
+        padding: 25px 18px;
+    }
+
+    .register-card {
+        max-width: 560px;
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .register-card {
+        padding: 34px 22px;
+        border-radius: 20px;
+    }
+
+    .brand-kg {
+        font-size: 36px;
+    }
+
+    .brand-name {
+        font-size: 19px;
+    }
+
+    .register-card h1 {
+        font-size: 25px;
+    }
+
+    .register-description {
+        font-size: 12px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}
+
+
+/* =========================
+   VERY SMALL PHONE
+========================= */
+
+@media (max-width: 380px) {
+
+    .register-center {
+        padding: 18px 12px;
+    }
+
+    .register-card {
+        padding: 28px 17px;
+    }
+
+    .input-group input,
+    .input-group select {
+        height: 48px;
+        font-size: 12px;
+    }
+
+    .create-account-submit {
+        height: 50px;
+    }
+}

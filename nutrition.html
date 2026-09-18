@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>KG Fitness | Nutrition</title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="nutrition.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ============================= -->
+    <!-- SIDEBAR -->
+    <!-- ============================= -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+
+            <div class="brand-kg">
+                KG
+            </div>
+
+            <div class="brand-name">
+                FITNESS
+            </div>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <a
+                href="dashboard.html"
+                class="nav-item"
+            >
+                <span>⌂</span>
+                Dashboard
+            </a>
+
+
+            <a
+                href="workout.html"
+                class="nav-item"
+            >
+                <span>🏋</span>
+                My Workout
+            </a>
+
+
+            <a
+                href="dashboard.html#calendar"
+                class="nav-item"
+            >
+                <span>▣</span>
+                Calendar
+            </a>
+
+
+            <a
+                href="dashboard.html#exercises"
+                class="nav-item"
+            >
+                <span>💪</span>
+                Exercises
+            </a>
+
+
+            <a
+                href="nutrition.html"
+                class="nav-item active"
+            >
+                <span>🍎</span>
+                Nutrition
+            </a>
+
+
+            <a
+                href="dashboard.html#progress"
+                class="nav-item"
+            >
+                <span>📊</span>
+                My Progress
+            </a>
+
+
+            <a
+                href="dashboard.html#machines"
+                class="nav-item"
+            >
+                <span>⚙</span>
+                Identify Machine
+            </a>
+
+
+            <a
+                href="dashboard.html#reviews"
+                class="nav-item"
+            >
+                <span>⭐</span>
+                Reviews
+            </a>
+
+
+            <a
+                href="dashboard.html#achievements"
+                class="nav-item"
+            >
+                <span>🏆</span>
+                Achievements
+            </a>
+
+
+            <a
+                href="dashboard.html#profile"
+                class="nav-item"
+            >
+                <span>👤</span>
+                My Profile
+            </a>
+
+        </nav>
+
+
+        <button
+            type="button"
+            class="logout-btn"
+            id="logoutBtn"
+        >
+            LOGOUT
+        </button>
+
+    </aside>
+
+
+
+    <!-- ============================= -->
+    <!-- MAIN CONTENT -->
+    <!-- ============================= -->
+
+    <main class="nutrition-main">
+
+
+        <!-- ============================= -->
+        <!-- TOP BAR -->
+        <!-- ============================= -->
+
+        <header class="topbar">
+
+            <div>
+
+                <p class="topbar-label">
+                    KG FITNESS
+                </p>
+
+                <h1>
+                    Nutrition Plan
+                </h1>
+
+            </div>
+
+
+            <div class="user-area">
+
+                <div class="user-info">
+
+                    <span
+                        class="user-name"
+                        id="userName"
+                    >
+                        Welcome
+                    </span>
+
+                    <span
+                        class="user-goal"
+                        id="userGoal"
+                    >
+                        Loading...
+                    </span>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- ============================= -->
+        <!-- NUTRITION HERO -->
+        <!-- ============================= -->
+
+        <section class="nutrition-hero">
+
+            <div class="hero-content">
+
+                <span class="hero-label">
+                    90 DAY NUTRITION
+                </span>
+
+                <h2>
+                    Fuel Your Body.
+                    <span>Reach Your Goal.</span>
+                </h2>
+
+                <p>
+                    Your daily nutrition plan is automatically
+                    adapted to your fitness goal and program day.
+                </p>
+
+            </div>
+
+
+            <div class="hero-day">
+
+                <span>
+                    CURRENT DAY
+                </span>
+
+                <strong id="currentDay">
+                    DAY 1
+                </strong>
+
+                <small>
+                    90 DAY PROGRAM
+                </small>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ============================= -->
+        <!-- DAY SELECTOR -->
+        <!-- ============================= -->
+
+        <section class="day-selector-section">
+
+            <div class="section-header">
+
+                <div>
+
+                    <span class="section-label">
+                        YOUR PROGRAM
+                    </span>
+
+                    <h2>
+                        Nutrition Day
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="day-selector">
+
+                <button
+                    type="button"
+                    id="previousDayBtn"
+                    class="day-navigation-btn"
+                >
+                    ← PREVIOUS
+                </button>
+
+
+                <div class="selected-day">
+
+                    <span>
+                        DAY
+                    </span>
+
+                    <strong id="selectedDay">
+                        1
+                    </strong>
+
+                    <small>
+                        OF 90
+                    </small>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="nextDayBtn"
+                    class="day-navigation-btn"
+                >
+                    NEXT →
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ============================= -->
+        <!-- DAILY TOTALS -->
+        <!-- ============================= -->
+
+        <section class="dashboard-section">
+
+            <div class="section-header">
+
+                <div>
+
+                    <span class="section-label">
+                        DAILY TARGETS
+                    </span>
+
+                    <h2>
+                        Nutrition Overview
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="nutrition-grid">
+
+
+                <div class="nutrition-card">
+
+                    <div class="nutrition-icon">
+                        🔥
+                    </div>
+
+                    <span>
+                        Calories
+                    </span>
+
+                    <strong id="caloriesValue">
+                        0
+                    </strong>
+
+                    <small>
+                        kcal
+                    </small>
+
+                </div>
+
+
+
+                <div class="nutrition-card">
+
+                    <div class="nutrition-icon">
+                        💪
+                    </div>
+
+                    <span>
+                        Protein
+                    </span>
+
+                    <strong id="proteinValue">
+                        0
+                    </strong>
+
+                    <small>
+                        g
+                    </small>
+
+                </div>
+
+
+
+                <div class="nutrition-card">
+
+                    <div class="nutrition-icon">
+                        🍚
+                    </div>
+
+                    <span>
+                        Carbs
+                    </span>
+
+                    <strong id="carbsValue">
+                        0
+                    </strong>
+
+                    <small>
+                        g
+                    </small>
+
+                </div>
+
+
+
+                <div class="nutrition-card">
+
+                    <div class="nutrition-icon">
+                        🥑
+                    </div>
+
+                    <span>
+                        Fats
+                    </span>
+
+                    <strong id="fatsValue">
+                        0
+                    </strong>
+
+                    <small>
+                        g
+                    </small>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ============================= -->
+        <!-- MEALS -->
+        <!-- ============================= -->
+
+        <section class="dashboard-section">
+
+            <div class="section-header">
+
+                <div>
+
+                    <span class="section-label">
+                        DAILY MEALS
+                    </span>
+
+                    <h2>
+                        Today's Nutrition
+                    </h2>
+
+                </div>
+
+                <span
+                    class="meal-count"
+                    id="mealCount"
+                >
+                    5 MEALS
+                </span>
+
+            </div>
+
+
+            <div
+                class="meals-container"
+                id="mealsContainer"
+            >
+
+                <!-- Meals will be generated by nutrition.js -->
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ============================= -->
+        <!-- HYDRATION -->
+        <!-- ============================= -->
+
+        <section class="dashboard-section">
+
+            <div class="hydration-card">
+
+                <div class="hydration-icon">
+                    💧
+                </div>
+
+
+                <div class="hydration-content">
+
+                    <span class="section-label">
+                        HYDRATION
+                    </span>
+
+                    <h2>
+                        Stay Hydrated
+                    </h2>
+
+                    <p id="hydrationText">
+                        Drink water regularly throughout the day.
+                    </p>
+
+                    <p id="trainingHydrationText">
+                        Drink additional water before, during
+                        and after training.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ============================= -->
+        <!-- IMPORTANT NOTICE -->
+        <!-- ============================= -->
+
+        <section class="dashboard-section">
+
+            <div class="nutrition-notice">
+
+                <div class="notice-icon">
+                    ⚠️
+                </div>
+
+                <div>
+
+                    <strong>
+                        Important
+                    </strong>
+
+                    <p>
+                        This nutrition plan is designed as general
+                        fitness guidance. Individual nutritional
+                        needs can vary depending on body size,
+                        activity level, health conditions and other
+                        factors. If you have specific dietary or
+                        medical needs, consult a qualified healthcare
+                        or nutrition professional.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ============================= -->
+        <!-- FOOTER -->
+        <!-- ============================= -->
+
+        <footer class="nutrition-footer">
+
+            <div class="footer-brand">
+                KG FITNESS
+            </div>
+
+            <p>
+                Your body. Your goal. Your journey.
+            </p>
+
+            <span>
+                © 2026 KG Fitness. All rights reserved.
+            </span>
+
+        </footer>
+
+
+    </main>
+
+
+
+    <!-- ============================= -->
+    <!-- JAVASCRIPT -->
+    <!-- ============================= -->
+
+    <script
+        type="module"
+        src="nutrition.js"
+    ></script>
+
+
+</body>
+
+</html>

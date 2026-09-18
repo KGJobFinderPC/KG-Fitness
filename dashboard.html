@@ -1,0 +1,1370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>KG Fitness | Dashboard</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+
+    <!-- ============================= -->
+    <!-- SIDEBAR -->
+    <!-- ============================= -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+            <div class="brand-kg">KG</div>
+            <div class="brand-name">FITNESS</div>
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <a href="#dashboard" class="nav-item active">
+                <span>⌂</span>
+                Dashboard
+            </a>
+
+            <a href="workout.html" class="nav-item">
+    <span>🏋</span>
+    My Workout
+</a>
+
+            <a href="#calendar" class="nav-item">
+                <span>▣</span>
+                Calendar
+            </a>
+
+            <a href="exercises.html" class="nav-item">
+    <span>💪</span>
+    Exercises
+</a>
+            <a href="nutrition.html" class="nav-item">
+                <span>🍎</span>
+                Nutrition
+            </a>
+
+            <a href="progress.html" class="nav-item">
+    <span>📊</span>
+    My Progress
+</a>
+
+            <a href="identify-machine.html" class="nav-item">
+    <span>📷</span>
+    Identify Machine
+</a>
+
+            <a href="#reviews" class="nav-item">
+                <span>⭐</span>
+                Reviews
+            </a>
+
+            <a href="#achievements" class="nav-item">
+                <span>🏆</span>
+                Achievements
+            </a>
+
+            <a href="#profile" class="nav-item">
+                <span>👤</span>
+                My Profile
+            </a>
+
+        </nav>
+
+        <button
+            type="button"
+            class="logout-btn"
+            id="logoutBtn"
+        >
+            LOGOUT
+        </button>
+
+    </aside>
+
+
+    <!-- ============================= -->
+    <!-- MAIN CONTENT -->
+    <!-- ============================= -->
+
+    <main class="dashboard-main">
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <div>
+                <p class="topbar-label">
+                    KG FITNESS
+                </p>
+
+                <h1>
+                    Your Fitness Dashboard
+                </h1>
+            </div>
+
+            <div class="user-area">
+
+                <div class="notification">
+                    🔔
+                </div>
+
+                <div class="user-info">
+
+                    <span class="user-name" id="userName">
+                        Welcome
+                    </span>
+
+                    <span class="user-email" id="userEmail">
+                        Loading...
+                    </span>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ============================= -->
+        <!-- WELCOME HERO -->
+        <!-- ============================= -->
+
+        <section
+            class="dashboard-hero"
+            id="dashboard"
+        >
+
+            <div class="hero-content">
+
+                <span class="hero-label">
+                    YOUR FITNESS JOURNEY
+                </span>
+
+                <h2>
+                    Welcome back,
+                    <span id="heroUserName">
+                        Athlete
+                    </span>.
+                </h2>
+
+                <p>
+                    Stay consistent, follow your plan,
+                    and become stronger every day.
+                </p>
+
+                <button
+                    type="button"
+                    class="primary-btn"
+                    id="startWorkoutBtn"
+                >
+                    START TODAY'S WORKOUT
+                </button>
+
+            </div>
+
+            <div class="hero-stat">
+
+                <span>
+                    CURRENT DAY
+                </span>
+
+                <strong id="currentDay">
+                    DAY 1
+                </strong>
+
+                <small>
+                    Keep going!
+                </small>
+
+            </div>
+
+        </section>
+
+
+        <!-- ============================= -->
+        <!-- QUICK STATS -->
+        <!-- ============================= -->
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    🔥
+                </div>
+
+                <div>
+                    <span>
+                        Current Streak
+                    </span>
+
+                    <strong id="streakValue">
+                        0 Days
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    🏋
+                </div>
+
+                <div>
+                    <span>
+                        Workouts Completed
+                    </span>
+
+                    <strong id="workoutsValue">
+                        0
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    📅
+                </div>
+
+                <div>
+                    <span>
+                        Program Progress
+                    </span>
+
+                    <strong id="programProgress">
+                        0%
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    🏆
+                </div>
+
+                <div>
+                    <span>
+                        Achievements
+                    </span>
+
+                    <strong id="achievementValue">
+                        0
+                    </strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ============================= -->
+        <!-- TODAY'S WORKOUT -->
+        <!-- ============================= -->
+
+        <section
+            class="dashboard-section"
+            id="workout"
+        >
+
+            <div class="section-header">
+
+                <div>
+
+                    <span class="section-label">
+                        TODAY
+                    </span>
+
+                    <h2>
+                        Today's Workout
+                    </h2>
+
+                </div>
+
+                <span class="day-badge">
+                    DAY 1
+                </span>
+
+            </div>
+
+
+            <div class="workout-card">
+
+                <div class="workout-info">
+
+                    <div class="workout-icon">
+                        🏋️
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Full Body Training
+                        </h3>
+
+                        <p>
+                            Beginner workout designed
+                            to build consistency and strength.
+                        </p>
+
+                        <div class="workout-meta">
+
+                            <span>
+                                ⏱ 35 min
+                            </span>
+
+                            <span>
+                                💪 Beginner
+                            </span>
+
+                            <span>
+                                🔥 Full Body
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="workout-actions">
+
+                    <button
+                        type="button"
+                        class="secondary-btn"
+                        id="viewWorkoutBtn"
+                    >
+                        VIEW WORKOUT
+                    </button>
+
+                    <button
+                        type="button"
+                        class="finish-btn"
+                        id="finishDayBtn"
+                    >
+                        ✓ FINISH DAY
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ============================= -->
+        <!-- CALENDAR -->
+        <!-- ============================= -->
+
+        <section
+            class="dashboard-section"
+            id="calendar"
+        >
+
+            <div class="section-header">
+
+                <div>
+
+                    <span class="section-label">
+                        YOUR PROGRAM
+                    </span>
+
+                    <h2>
+                        Training Calendar
+                    </h2>
+
+                </div>
+
+                <span class="program-days">
+                    DAY 1 – DAY 90+
+                </span>
+
+            </div>
+
+
+            <div class="calendar-card">
+
+                <div class="calendar-legend">
+
+                    <div>
+                        <span class="legend-dot completed"></span>
+                        Completed
+                    </div>
+
+                    <div>
+                        <span class="legend-dot current"></span>
+                        Current
+                    </div>
+
+                    <div>
+                        <span class="legend-dot upcoming"></span>
+                        Upcoming
+                    </div>
+
+                    <div>
+                        <span class="legend-dot missed"></span>
+                        Missed
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="days-grid"
+                    id="daysGrid"
+                >
+
+                    <div class="day completed">
+                        1
+                    </div>
+
+                    <div class="day current">
+                        2
+                    </div>
+
+                    <div class="day upcoming">
+                        3
+                    </div>
+
+                    <div class="day upcoming">
+                        4
+                    </div>
+
+                    <div class="day upcoming">
+                        5
+                    </div>
+
+                    <div class="day upcoming">
+                        6
+                    </div>
+
+                    <div class="day upcoming">
+                        7
+                    </div>
+
+                    <div class="day upcoming">
+                        8
+                    </div>
+
+                    <div class="day upcoming">
+                        9
+                    </div>
+
+                    <div class="day upcoming">
+                        10
+                    </div>
+
+                    <div class="day upcoming">
+                        11
+                    </div>
+
+                    <div class="day upcoming">
+                        12
+                    </div>
+
+                    <div class="day upcoming">
+                        13
+                    </div>
+
+                    <div class="day upcoming">
+                        14
+                    </div>
+
+                </div>
+
+                <button
+                    type="button"
+                    class="calendar-btn"
+                    id="viewCalendarBtn"
+                >
+                    VIEW FULL CALENDAR
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ============================= -->
+        <!-- GOAL + PROFILE -->
+        <!-- ============================= -->
+
+        <section class="two-column-grid">
+
+            <div class="dashboard-card goal-card">
+
+                <div class="card-header">
+
+                    <span class="section-label">
+                        YOUR GOAL
+                    </span>
+
+                    <span class="card-icon">
+                        🎯
+                    </span>
+
+                </div>
+
+                <h3 id="userGoal">
+                    Loading...
+                </h3>
+
+                <p>
+                    Your training and nutrition plan
+                    will be adapted to your main goal.
+                </p>
+
+                <div class="goal-progress">
+
+                    <div class="progress-header">
+                        <span>
+                            Goal Progress
+                        </span>
+
+                        <strong id="goalProgressText">
+                            0%
+                        </strong>
+                    </div>
+
+                    <div class="progress-bar">
+                        <div
+                            class="progress-fill"
+                            id="goalProgressFill"
+                        ></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-card profile-summary">
+
+                <div class="card-header">
+
+                    <span class="section-label">
+                        YOUR PROFILE
+                    </span>
+
+                    <span class="card-icon">
+                        👤
+                    </span>
+
+                </div>
+
+                <div class="profile-data">
+
+                    <div>
+                        <span>
+                            Height
+                        </span>
+
+                        <strong id="profileHeight">
+                            -- cm
+                        </strong>
+                    </div>
+
+                    <div>
+                        <span>
+                            Weight
+                        </span>
+
+                        <strong id="profileWeight">
+                            -- kg
+                        </strong>
+                    </div>
+
+                    <div>
+                        <span>
+                            Age
+                        </span>
+
+                        <strong id="profileAge">
+                            --
+                        </strong>
+                    </div>
+
+                    <div>
+                        <span>
+                            Level
+                        </span>
+
+                        <strong id="profileLevel">
+                            --
+                        </strong>
+                    </div>
+
+                </div>
+
+                <button
+                    type="button"
+                    class="small-btn"
+                    id="editProfileBtn"
+                >
+                    EDIT PROFILE
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ============================= -->
+        <!-- EXERCISES -->
+        <!-- ============================= -->
+
+        <section
+            class="dashboard-section"
+            id="exercises"
+        >
+
+            <div class="section-header">
+
+                <div>
+
+                    <span class="section-label">
+                        TRAINING
+                    </span>
+
+                    <h2>
+                        Exercise Guidance
+                    </h2>
+
+                </div>
+
+                <button
+    type="button"
+    class="small-btn"
+    id="allExercisesBtn"
+    onclick="window.location.href='exercises.html'"
+>
+    VIEW ALL
+</button>
+            </div>
+
+
+            <div class="feature-grid">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        🏋️
+                    </div>
+
+                    <h3>
+                        Exercises
+                    </h3>
+
+                    <p>
+                        Learn how to perform exercises
+                        with simple instructions.
+                    </p>
+
+                    <button
+    type="button"
+    class="card-link"
+    onclick="window.location.href='exercises.html'"
+>
+    EXPLORE EXERCISES →
+</button>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        ⚙️
+                    </div>
+
+                    <h3>
+                        Machines
+                    </h3>
+
+                    <p>
+                        Learn how gym machines work
+                        and how to use them correctly.
+                    </p>
+
+                    <button
+                        type="button"
+                        class="card-link"
+                        id="machineBtn"
+                    >
+                        IDENTIFY MACHINE →
+                    </button>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        📖
+                    </div>
+
+                    <h3>
+                        Exercise Library
+                    </h3>
+
+                    <p>
+                        Discover exercises for every
+                        muscle group and fitness level.
+                    </p>
+
+                    <button
+    type="button"
+    class="card-link"
+    onclick="window.location.href='exercises.html'"
+>
+    OPEN LIBRARY →
+</button>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ============================= -->
+        <!-- MACHINE IDENTIFICATION -->
+        <!-- ============================= -->
+
+        <section
+            class="dashboard-section machine-section"
+            id="machines"
+        >
+
+            <div class="machine-content">
+
+                <span class="section-label">
+                    SMART FITNESS
+                </span>
+
+                <h2>
+                    Identify Your Gym Machine
+                </h2>
+
+                <p>
+                    Take a photo of a gym machine and KG Fitness
+                    can help identify it, explain which muscles
+                    it targets, how to adjust it, and how to use it safely.
+                </p>
+
+                <button
+                    type="button"
+                    class="primary-btn"
+                    id="identifyMachineBtn"
+                >
+                    📷 IDENTIFY MACHINE
+                </button>
+
+            </div>
+
+            <div class="machine-visual">
+                ⚙️
+            </div>
+
+        </section>
+
+
+        <!-- ============================= -->
+        <!-- NUTRITION -->
+        <!-- ============================= -->
+
+        <section
+            class="dashboard-section"
+            id="nutrition"
+        >
+
+            <div class="section-header">
+
+                <div>
+
+                    <span class="section-label">
+                        NUTRITION
+                    </span>
+
+                    <h2>
+                        Nutrition & Daily Targets
+                    </h2>
+
+                </div>
+
+                <button
+                    type="button"
+                    class="small-btn"
+                    id="nutritionBtn"
+                >
+                    VIEW NUTRITION
+                </button>
+
+            </div>
+
+
+            <div class="nutrition-grid">
+
+                <div class="nutrition-card">
+
+                    <span>
+                        Daily Calories
+                    </span>
+
+                    <strong id="calorieTarget">
+                        0
+                    </strong>
+
+                    <small>
+                        kcal
+                    </small>
+
+                </div>
+
+
+                <div class="nutrition-card">
+
+                    <span>
+                        Protein
+                    </span>
+
+                    <strong id="proteinTarget">
+                        0
+                    </strong>
+
+                    <small>
+                        g
+                    </small>
+
+                </div>
+
+
+                <div class="nutrition-card">
+
+                    <span>
+                        Water
+                    </span>
+
+                    <strong id="waterTarget">
+                        0
+                    </strong>
+
+                    <small>
+                        L
+                    </small>
+
+                </div>
+
+
+                <div class="nutrition-card">
+
+                    <span>
+                        Meals
+                    </span>
+
+                    <strong id="mealTarget">
+                        0
+                    </strong>
+
+                    <small>
+                        / day
+                    </small>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ============================= -->
+        <!-- PROGRESS -->
+        <!-- ============================= -->
+
+        <section
+            class="dashboard-section"
+            id="progress"
+        >
+
+            <div class="section-header">
+
+                <div>
+
+                    <span class="section-label">
+                        YOUR RESULTS
+                    </span>
+
+                    <h2>
+                        Progress Tracking
+                    </h2>
+
+                </div>
+
+                <button
+                    type="button"
+                    class="small-btn"
+                    id="progressBtn"
+                >
+                    VIEW PROGRESS
+                </button>
+
+            </div>
+
+
+            <div class="progress-card">
+
+                <div class="progress-stat">
+
+                    <span>
+                        Starting Weight
+                    </span>
+
+                    <strong id="startingWeight">
+                        -- kg
+                    </strong>
+
+                </div>
+
+
+                <div class="progress-stat">
+
+                    <span>
+                        Current Weight
+                    </span>
+
+                    <strong id="currentWeight">
+                        -- kg
+                    </strong>
+
+                </div>
+
+
+                <div class="progress-stat">
+
+                    <span>
+                        Total Change
+                    </span>
+
+                    <strong id="weightChange">
+                        0 kg
+                    </strong>
+
+                </div>
+
+
+                <div class="progress-stat">
+
+                    <span>
+                        Program Completion
+                    </span>
+
+                    <strong id="completionPercent">
+                        0%
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ============================= -->
+        <!-- ACHIEVEMENTS -->
+        <!-- ============================= -->
+
+        <section
+            class="dashboard-section"
+            id="achievements"
+        >
+
+            <div class="section-header">
+
+                <div>
+
+                    <span class="section-label">
+                        KEEP GOING
+                    </span>
+
+                    <h2>
+                        Achievements
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="achievements-grid">
+
+                <div class="achievement-card locked">
+
+                    <div class="achievement-icon">
+                        🏆
+                    </div>
+
+                    <h3>
+                        First Workout
+                    </h3>
+
+                    <p>
+                        Complete your first workout.
+                    </p>
+
+                </div>
+
+
+                <div class="achievement-card locked">
+
+                    <div class="achievement-icon">
+                        🔥
+                    </div>
+
+                    <h3>
+                        7 Day Streak
+                    </h3>
+
+                    <p>
+                        Train for seven consecutive days.
+                    </p>
+
+                </div>
+
+
+                <div class="achievement-card locked">
+
+                    <div class="achievement-icon">
+                        💪
+                    </div>
+
+                    <h3>
+                        30 Workouts
+                    </h3>
+
+                    <p>
+                        Complete 30 workouts.
+                    </p>
+
+                </div>
+
+
+                <div class="achievement-card locked">
+
+                    <div class="achievement-icon">
+                        👑
+                    </div>
+
+                    <h3>
+                        90 Day Champion
+                    </h3>
+
+                    <p>
+                        Complete the first 90 days.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ============================= -->
+        <!-- REVIEWS -->
+        <!-- ============================= -->
+
+        <section
+            class="dashboard-section reviews-section"
+            id="reviews"
+        >
+
+            <div class="section-header">
+
+                <div>
+
+                    <span class="section-label">
+                        YOUR FEEDBACK
+                    </span>
+
+                    <h2>
+                        Rate KG Fitness
+                    </h2>
+
+                </div>
+
+                <div class="rating-summary">
+
+                    <strong id="averageRating">
+                        5.0
+                    </strong>
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="review-card">
+
+                <h3>
+                    How do you like KG Fitness?
+                </h3>
+
+                <p>
+                    Your feedback helps us improve the platform.
+                </p>
+
+
+                <div
+                    class="star-selector"
+                    id="starSelector"
+                >
+
+                    <button
+                        type="button"
+                        class="star"
+                        data-rating="1"
+                    >
+                        ★
+                    </button>
+
+                    <button
+                        type="button"
+                        class="star"
+                        data-rating="2"
+                    >
+                        ★
+                    </button>
+
+                    <button
+                        type="button"
+                        class="star"
+                        data-rating="3"
+                    >
+                        ★
+                    </button>
+
+                    <button
+                        type="button"
+                        class="star"
+                        data-rating="4"
+                    >
+                        ★
+                    </button>
+
+                    <button
+                        type="button"
+                        class="star"
+                        data-rating="5"
+                    >
+                        ★
+                    </button>
+
+                </div>
+
+
+                <textarea
+                    id="reviewText"
+                    placeholder="Write your review..."
+                    rows="5"
+                ></textarea>
+
+
+                <div
+                    id="reviewMessage"
+                    class="review-message"
+                ></div>
+
+
+                <button
+                    type="button"
+                    class="review-submit"
+                    id="submitReviewBtn"
+                >
+                    SUBMIT REVIEW
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ============================= -->
+        <!-- PROFILE -->
+        <!-- ============================= -->
+
+        <section
+            class="dashboard-section"
+            id="profile"
+        >
+
+            <div class="section-header">
+
+                <div>
+
+                    <span class="section-label">
+                        ACCOUNT
+                    </span>
+
+                    <h2>
+                        My Profile
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="profile-card">
+
+                <div class="profile-row">
+
+                    <span>
+                        Full Name
+                    </span>
+
+                    <strong id="profileName">
+                        Loading...
+                    </strong>
+
+                </div>
+
+
+                <div class="profile-row">
+
+                    <span>
+                        Email
+                    </span>
+
+                    <strong id="profileEmail">
+                        Loading...
+                    </strong>
+
+                </div>
+
+
+                <div class="profile-row">
+
+                    <span>
+                        Height
+                    </span>
+
+                    <strong id="profileHeightFull">
+                        --
+                    </strong>
+
+                </div>
+
+
+                <div class="profile-row">
+
+                    <span>
+                        Weight
+                    </span>
+
+                    <strong id="profileWeightFull">
+                        --
+                    </strong>
+
+                </div>
+
+
+                <div class="profile-row">
+
+                    <span>
+                        Age
+                    </span>
+
+                    <strong id="profileAgeFull">
+                        --
+                    </strong>
+
+                </div>
+
+
+                <div class="profile-row">
+
+                    <span>
+                        Fitness Level
+                    </span>
+
+                    <strong id="profileLevelFull">
+                        --
+                    </strong>
+
+                </div>
+
+
+                <div class="profile-row">
+
+                    <span>
+                        Main Goal
+                    </span>
+
+                    <strong id="profileGoalFull">
+                        --
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ============================= -->
+        <!-- FOOTER -->
+        <!-- ============================= -->
+
+        <footer class="dashboard-footer">
+
+            <div class="footer-brand">
+                KG FITNESS
+            </div>
+
+            <p>
+                Your body. Your goal. Your journey.
+            </p>
+
+            <span>
+                © 2026 KG Fitness. All rights reserved.
+            </span>
+
+        </footer>
+
+    </main>
+
+
+    <!-- ============================= -->
+    <!-- JAVASCRIPT -->
+    <!-- ============================= -->
+
+    <script
+        type="module"
+        src="dashboard.js"
+    ></script>
+<script type="module" src="./data/nutrition-90-days.js"></script>
+</body>
+</html>

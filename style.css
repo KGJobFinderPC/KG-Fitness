@@ -1,0 +1,706 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #080b14;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+button,
+a {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    width: 100%;
+    min-height: 82px;
+    padding: 0 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    background: rgba(8, 11, 20, 0.96);
+    border-bottom: 1px solid rgba(255, 216, 77, 0.12);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(14px);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+}
+
+.logo-kg {
+    font-size: 28px;
+    font-weight: 800;
+    color: #ffd84d;
+    letter-spacing: -1px;
+}
+
+.logo-name {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #ffffff;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.nav a {
+    color: #c7cad4;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    color: #ffd84d;
+}
+
+.header-buttons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.login-btn,
+.register-btn,
+.start-btn,
+.learn-btn,
+.card-btn {
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.login-btn {
+    color: #ffffff;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.login-btn:hover {
+    border-color: #ffd84d;
+    color: #ffd84d;
+}
+
+.register-btn,
+.start-btn,
+.card-btn {
+    background: #ffd84d;
+    color: #080b14;
+}
+
+.register-btn:hover,
+.start-btn:hover,
+.card-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(255, 216, 77, 0.2);
+}
+
+.learn-btn {
+    color: #ffffff;
+    background: transparent;
+    border: 1px solid rgba(255, 216, 77, 0.35);
+}
+
+.learn-btn:hover {
+    background: rgba(255, 216, 77, 0.08);
+    border-color: #ffd84d;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: calc(100vh - 82px);
+    padding: 90px 7%;
+    display: grid;
+    grid-template-columns: 1.25fr 0.75fr;
+    align-items: center;
+    gap: 70px;
+    background:
+        radial-gradient(circle at 15% 30%, rgba(255, 216, 77, 0.08), transparent 30%),
+        radial-gradient(circle at 85% 60%, rgba(83, 110, 255, 0.08), transparent 30%);
+}
+
+.hero-content {
+    max-width: 760px;
+}
+
+.hero-small,
+.section-title > p,
+.about-content > p,
+.machine-content > p {
+    color: #ffd84d;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    margin-bottom: 16px;
+}
+
+.hero h1 {
+    font-size: clamp(48px, 6vw, 82px);
+    line-height: 1.03;
+    font-weight: 800;
+    letter-spacing: -3px;
+}
+
+.hero h1 span,
+.section-title h2 span,
+.about-content h2 span,
+.machine-content h2 span,
+.cta-section h2 span {
+    color: #ffd84d;
+}
+
+.hero-text {
+    max-width: 650px;
+    margin-top: 25px;
+    color: #aeb3c2;
+    font-size: 17px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 32px;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 55px;
+    margin-top: 48px;
+}
+
+.hero-stats div {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-stats strong {
+    color: #ffd84d;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.hero-stats small {
+    color: #858b9b;
+    font-size: 12px;
+}
+
+.hero-card {
+    padding: 40px;
+    border-radius: 24px;
+    background: linear-gradient(
+        145deg,
+        rgba(255, 255, 255, 0.08),
+        rgba(255, 255, 255, 0.025)
+    );
+    border: 1px solid rgba(255, 216, 77, 0.18);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+}
+
+.fitness-icon {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    background: rgba(255, 216, 77, 0.1);
+    font-size: 31px;
+    margin-bottom: 24px;
+}
+
+.hero-card h2 {
+    font-size: 30px;
+    line-height: 1.2;
+}
+
+.hero-card h2 span {
+    color: #ffd84d;
+}
+
+.hero-card > p {
+    margin-top: 15px;
+    color: #9da3b3;
+    font-size: 14px;
+}
+
+.mini-progress {
+    margin-top: 35px;
+}
+
+.progress-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color: #aeb3c2;
+    font-size: 12px;
+}
+
+.progress-top strong {
+    color: #ffd84d;
+}
+
+.progress-bar {
+    height: 9px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.progress-fill {
+    width: 7%;
+    height: 100%;
+    background: #ffd84d;
+    border-radius: 20px;
+}
+
+.card-btn {
+    width: 100%;
+    margin-top: 30px;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+.features-section,
+.goals-section,
+.about-section,
+.machine-section {
+    padding: 110px 7%;
+}
+
+.section-title {
+    max-width: 760px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.section-title h2 {
+    font-size: clamp(34px, 4vw, 52px);
+    line-height: 1.15;
+    font-weight: 800;
+}
+
+.section-description {
+    color: #9298a8;
+    margin-top: 16px;
+    font-size: 15px;
+}
+
+
+/* =========================
+   FEATURES
+========================= */
+
+.features-section {
+    background: #0b0f19;
+}
+
+.features-grid {
+    max-width: 1250px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.feature-card {
+    min-height: 230px;
+    padding: 30px 25px;
+    border-radius: 18px;
+    background: #101521;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(255, 216, 77, 0.35);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.feature-icon {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    color: #9298a8;
+    font-size: 13px;
+}
+
+
+/* =========================
+   GOALS
+========================= */
+
+.goals-grid {
+    max-width: 1250px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.goal-card {
+    padding: 30px 25px;
+    border-radius: 18px;
+    background: linear-gradient(
+        145deg,
+        #111722,
+        #0d111b
+    );
+    border: 1px solid rgba(255, 216, 77, 0.08);
+    transition: 0.3s;
+}
+
+.goal-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 216, 77, 0.35);
+}
+
+.goal-card > span {
+    display: block;
+    font-size: 31px;
+    margin-bottom: 18px;
+}
+
+.goal-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.goal-card p {
+    color: #9298a8;
+    font-size: 13px;
+}
+
+
+/* =========================
+   MACHINE
+========================= */
+
+.machine-section {
+    display: grid;
+    grid-template-columns: 1fr 0.7fr;
+    align-items: center;
+    gap: 80px;
+    background:
+        radial-gradient(circle at 80% 50%, rgba(255, 216, 77, 0.07), transparent 30%),
+        #090d16;
+}
+
+.machine-content {
+    max-width: 700px;
+}
+
+.machine-content h2 {
+    font-size: clamp(35px, 4vw, 55px);
+    line-height: 1.15;
+}
+
+.machine-content > p:not(:first-child) {
+    max-width: 620px;
+    margin-top: 20px;
+    color: #9da3b3;
+}
+
+.machine-content .start-btn {
+    margin-top: 30px;
+}
+
+.machine-card {
+    padding: 50px 35px;
+    text-align: center;
+    border-radius: 25px;
+    background: #111722;
+    border: 1px solid rgba(255, 216, 77, 0.2);
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.3);
+}
+
+.camera-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 22px;
+    background: rgba(255, 216, 77, 0.1);
+    font-size: 38px;
+}
+
+.machine-card h3 {
+    font-size: 23px;
+}
+
+.machine-card p {
+    margin-top: 12px;
+    color: #9298a8;
+    font-size: 14px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-section {
+    background: #0b0f19;
+}
+
+.about-content {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+}
+
+.about-content h2 {
+    font-size: clamp(36px, 5vw, 60px);
+    line-height: 1.15;
+}
+
+.about-content > p:not(:first-child) {
+    max-width: 700px;
+    margin: 22px auto 0;
+    color: #9298a8;
+    font-size: 15px;
+}
+
+.about-content .start-btn {
+    margin-top: 30px;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.cta-section {
+    padding: 110px 7%;
+    text-align: center;
+    background:
+        radial-gradient(circle at center, rgba(255, 216, 77, 0.09), transparent 38%),
+        #080b14;
+}
+
+.cta-section h2 {
+    font-size: clamp(38px, 5vw, 62px);
+    line-height: 1.15;
+}
+
+.cta-section p {
+    max-width: 650px;
+    margin: 20px auto 0;
+    color: #9298a8;
+}
+
+.cta-section .register-btn {
+    margin-top: 30px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    min-height: 100px;
+    padding: 30px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    background: #060810;
+}
+
+.footer p {
+    color: #6f7585;
+    font-size: 12px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1050px) {
+
+    .nav {
+        display: none;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding-top: 70px;
+    }
+
+    .hero-content {
+        max-width: 850px;
+    }
+
+    .hero-card {
+        max-width: 600px;
+    }
+
+    .features-grid,
+    .goals-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .machine-section {
+        grid-template-columns: 1fr;
+    }
+
+    .machine-card {
+        max-width: 600px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 650px) {
+
+    .header {
+        min-height: 72px;
+        padding: 0 20px;
+    }
+
+    .logo-name {
+        font-size: 15px;
+    }
+
+    .logo-kg {
+        font-size: 24px;
+    }
+
+    .header-buttons {
+        gap: 7px;
+    }
+
+    .login-btn,
+    .register-btn {
+        padding: 9px 11px;
+        font-size: 11px;
+    }
+
+    .hero,
+    .features-section,
+    .goals-section,
+    .about-section,
+    .machine-section,
+    .cta-section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .hero {
+        padding-top: 60px;
+        padding-bottom: 70px;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+        letter-spacing: -2px;
+    }
+
+    .hero-text {
+        font-size: 14px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-buttons button {
+        width: 100%;
+    }
+
+    .hero-stats {
+        gap: 25px;
+        justify-content: space-between;
+    }
+
+    .hero-stats strong {
+        font-size: 23px;
+    }
+
+    .hero-card {
+        padding: 28px 22px;
+    }
+
+    .features-grid,
+    .goals-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        margin-bottom: 40px;
+    }
+
+    .section-title h2 {
+        font-size: 34px;
+    }
+
+    .machine-content h2 {
+        font-size: 36px;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>KG Fitness - Identify Machine</title>
+
+    <link
+        rel="stylesheet"
+        href="identify-machine.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <script type="module">
+
+        import {
+            pipeline
+        } from "https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.8.1";
+
+        window.HF = {
+            pipeline
+        };
+
+    </script>
+
+</head>
+
+
+<body>
+
+    <div class="identify-machine-page">
+
+
+        <!-- HEADER -->
+
+        <header class="page-header">
+
+            <a
+                href="dashboard.html"
+                class="back-button"
+            >
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                Back to Dashboard
+
+            </a>
+
+
+            <div class="header-title">
+
+                <i class="fa-solid fa-dumbbell"></i>
+
+                <div>
+
+                    <h1>
+                        Identify Machine
+                    </h1>
+
+                    <p>
+                        Find out what gym machine you are using
+                    </p>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <main class="identify-container">
+
+
+            <!-- INTRO -->
+
+            <section class="intro-card">
+
+                <div class="intro-icon">
+
+                    <i class="fa-solid fa-camera"></i>
+
+                </div>
+
+
+                <h2>
+                    Identify Your Gym Machine
+                </h2>
+
+
+                <p>
+                    Take a photo or upload an image of a gym machine
+                    and KG Fitness will help you identify it.
+                </p>
+
+            </section>
+
+
+
+            <!-- UPLOAD -->
+
+            <section class="upload-card">
+
+                <div class="upload-icon">
+
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+
+                </div>
+
+
+                <h2>
+                    Upload Machine Photo
+                </h2>
+
+
+                <p>
+                    Choose a clear photo of the machine you want to identify.
+                </p>
+
+
+                <label
+                    for="machineImageInput"
+                    class="upload-button"
+                >
+
+                    <i class="fa-solid fa-image"></i>
+
+                    Choose Image
+
+                </label>
+
+
+                <input
+                    type="file"
+                    id="machineImageInput"
+                    accept="image/*"
+                    hidden
+                >
+
+
+                <p class="upload-info">
+                    JPG, PNG or WEBP
+                </p>
+
+            </section>
+
+
+
+            <!-- IMAGE PREVIEW -->
+
+            <section
+                class="preview-card"
+                id="previewCard"
+                style="display:none;"
+            >
+
+                <h2>
+                    Selected Image
+                </h2>
+
+
+                <div class="image-preview">
+
+                    <img
+                        id="machinePreview"
+                        src=""
+                        alt="Selected gym machine"
+                    >
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="identifyButton"
+                    class="identify-button"
+                >
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    Identify Machine
+
+                </button>
+
+            </section>
+
+
+
+            <!-- AI RESULT -->
+
+            <section
+                class="result-card"
+                id="resultCard"
+                style="display:none;"
+            >
+
+
+                <div class="result-icon">
+
+                    <i class="fa-solid fa-dumbbell"></i>
+
+                </div>
+
+
+                <h2 id="machineName">
+                    Machine Identified
+                </h2>
+
+
+                <p id="machineDescription">
+                    Your machine information will appear here.
+                </p>
+
+
+
+                <!-- MACHINE INFORMATION -->
+
+                <div
+                    class="machine-information"
+                    id="machineInformation"
+                >
+
+
+                    <!-- MUSCLES -->
+
+                    <div class="information-card">
+
+                        <div class="information-icon">
+
+                            <i class="fa-solid fa-dumbbell"></i>
+
+                        </div>
+
+
+                        <h3>
+                            Muscles Worked
+                        </h3>
+
+
+                        <ul id="musclesWorked">
+
+                        </ul>
+
+                    </div>
+
+
+
+                    <!-- HOW TO USE -->
+
+                    <div class="information-card">
+
+                        <div class="information-icon">
+
+                            <i class="fa-solid fa-list-check"></i>
+
+                        </div>
+
+
+                        <h3>
+                            How to Use
+                        </h3>
+
+
+                        <ol id="howToUse">
+
+                        </ol>
+
+                    </div>
+
+
+
+                    <!-- TIPS -->
+
+                    <div class="information-card">
+
+                        <div class="information-icon">
+
+                            <i class="fa-solid fa-lightbulb"></i>
+
+                        </div>
+
+
+                        <h3>
+                            Tips
+                        </h3>
+
+
+                        <ul id="machineTips">
+
+                        </ul>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+        </main>
+
+
+    </div>
+
+
+
+    <script
+        type="module"
+        src="identify-machine.js"
+    ></script>
+
+</body>
+
+</html>

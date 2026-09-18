@@ -1,0 +1,686 @@
+/* =========================================
+   KG FITNESS - IDENTIFY MACHINE
+   KG FITNESS ORIGINAL STYLE
+   YELLOW + PURPLE + DARK
+========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #080a14;
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+
+.identify-machine-page {
+    width: 100%;
+    min-height: 100vh;
+    padding-bottom: 60px;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.page-header {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 25px 30px;
+
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+/* =========================================
+   BACK TO DASHBOARD
+========================================= */
+
+.back-button {
+    border: 1px solid rgba(139, 92, 246, 0.55);
+    background: #171329;
+    color: #ffffff;
+
+    padding: 11px 18px;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    min-width: 170px;
+    height: 44px;
+
+    text-decoration: none;
+
+    transition: 0.2s ease;
+}
+
+
+.back-button:hover {
+    background: #211b3d;
+    border-color: #ffd43b;
+    color: #ffd43b;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   HEADER TITLE
+========================================= */
+
+.header-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+
+.header-title > i {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #171329;
+    color: #ffd43b;
+
+    border: 1px solid rgba(255, 212, 59, 0.25);
+
+    border-radius: 14px;
+
+    font-size: 21px;
+}
+
+
+.header-title h1 {
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 3px;
+}
+
+
+.header-title p {
+    color: #9ca6bd;
+    font-size: 13px;
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.identify-container {
+    width: calc(100% - 40px);
+    max-width: 1100px;
+
+    margin: 35px auto 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 25px;
+}
+
+
+/* =========================================
+   INTRO CARD
+========================================= */
+
+.intro-card {
+    background: #111522;
+
+    border: 1px solid rgba(255, 212, 59, 0.25);
+
+    border-radius: 18px;
+
+    padding: 35px;
+
+    text-align: center;
+}
+
+
+.intro-icon {
+    width: 60px;
+    height: 60px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 17px;
+
+    background: #211b08;
+    color: #ffd43b;
+
+    font-size: 24px;
+}
+
+
+.intro-card h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+
+.intro-card p {
+    max-width: 650px;
+    margin: 0 auto;
+
+    color: #9ca6bd;
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   UPLOAD CARD
+========================================= */
+
+.upload-card {
+    background: #111522;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 18px;
+
+    padding: 40px 30px;
+
+    text-align: center;
+}
+
+
+.upload-icon {
+    width: 65px;
+    height: 65px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #211b08;
+    color: #ffd43b;
+
+    border-radius: 18px;
+
+    font-size: 25px;
+}
+
+
+.upload-card h2 {
+    font-size: 21px;
+    margin-bottom: 8px;
+}
+
+
+.upload-card p {
+    color: #9ca6bd;
+
+    font-size: 14px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   CHOOSE IMAGE BUTTON
+========================================= */
+
+.upload-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 13px 25px;
+
+    border-radius: 10px;
+
+    background: #ffd43b;
+    color: #080a14;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.upload-button:hover {
+    background: #ffe27a;
+
+    transform: translateY(-1px);
+}
+
+
+.upload-info {
+    margin-top: 15px !important;
+    margin-bottom: 0 !important;
+
+    font-size: 12px !important;
+    color: #68738a !important;
+}
+
+
+/* =========================================
+   PREVIEW CARD
+========================================= */
+
+.preview-card {
+    background: #111522;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 18px;
+
+    padding: 25px;
+
+    text-align: center;
+}
+
+
+.preview-card h2 {
+    font-size: 19px;
+    margin-bottom: 20px;
+}
+
+
+.image-preview {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+
+    overflow: hidden;
+
+    border-radius: 14px;
+
+    background: #070911;
+}
+
+
+.image-preview img {
+    display: block;
+
+    max-width: 100%;
+    max-height: 550px;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+
+    border-radius: 12px;
+}
+
+
+/* =========================================
+   IDENTIFY BUTTON
+========================================= */
+
+.identify-button {
+    width: 100%;
+
+    margin-top: 20px;
+
+    padding: 14px 20px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #ffd43b;
+    color: #080a14;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    transition: 0.2s ease;
+}
+
+
+.identify-button:hover {
+    background: #ffe27a;
+
+    transform: translateY(-1px);
+}
+
+
+.identify-button:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+
+/* =========================================
+   RESULT CARD
+========================================= */
+
+.result-card {
+    background: #111522;
+
+    border: 1px solid rgba(139, 92, 246, 0.40);
+
+    border-radius: 18px;
+
+    padding: 35px;
+
+    text-align: center;
+}
+
+
+.result-icon {
+    width: 65px;
+    height: 65px;
+
+    margin: 0 auto 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #211b3d;
+
+    color: #a78bfa;
+
+    border: 1px solid rgba(139, 92, 246, 0.25);
+
+    border-radius: 17px;
+
+    font-size: 25px;
+}
+
+
+.result-card h2 {
+    font-size: 23px;
+
+    margin-bottom: 8px;
+}
+
+
+.result-card > p {
+    color: #9ca6bd;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   MACHINE INFORMATION
+========================================= */
+
+.machine-information {
+    width: 100%;
+
+    margin-top: 30px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 18px;
+
+    text-align: left;
+}
+
+
+/* =========================================
+   INFORMATION CARD
+========================================= */
+
+.information-card {
+    background: #111522;
+
+    border: 1px solid rgba(255, 212, 59, 0.20);
+
+    border-radius: 16px;
+
+    padding: 24px;
+
+    min-height: 250px;
+
+    transition: all 0.25s ease;
+}
+
+
+.information-card:hover {
+    border-color: rgba(255, 212, 59, 0.45);
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================
+   INFORMATION ICON
+========================================= */
+
+.information-icon {
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 16px;
+
+    background: #211b08;
+
+    color: #ffd43b;
+
+    border: 1px solid rgba(255, 212, 59, 0.15);
+
+    border-radius: 12px;
+
+    font-size: 18px;
+}
+
+
+/* =========================================
+   INFORMATION TITLE
+========================================= */
+
+.information-card h3 {
+    color: #ffffff;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    margin-bottom: 16px;
+}
+
+
+/* =========================================
+   LISTS
+========================================= */
+
+.information-card ul,
+.information-card ol {
+    margin: 0;
+
+    padding-left: 20px;
+
+    color: #9ca6bd;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+
+.information-card li {
+    margin-bottom: 8px;
+
+    padding-left: 4px;
+}
+
+
+/* =========================================
+   YELLOW BULLETS / NUMBERS
+========================================= */
+
+.information-card ul li::marker,
+.information-card ol li::marker {
+    color: #ffd43b;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 850px) {
+
+    .machine-information {
+        grid-template-columns: 1fr;
+    }
+
+
+    .information-card {
+        min-height: auto;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .page-header {
+        padding: 20px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 18px;
+    }
+
+
+    .back-button {
+        width: 100%;
+        min-width: 0;
+    }
+
+
+    .header-title h1 {
+        font-size: 21px;
+    }
+
+
+    .identify-container {
+        width: calc(100% - 24px);
+
+        margin-top: 20px;
+
+        gap: 18px;
+    }
+
+
+    .intro-card,
+    .upload-card,
+    .preview-card,
+    .result-card {
+        padding: 25px 18px;
+    }
+
+
+    .result-card h2 {
+        font-size: 20px;
+    }
+
+
+    .machine-information {
+        gap: 14px;
+
+        margin-top: 25px;
+    }
+
+
+    .information-card {
+        padding: 20px;
+    }
+
+
+    .image-preview img {
+        max-height: 400px;
+    }
+
+}
+
+
+@media (max-width: 400px) {
+
+    .header-title {
+        gap: 10px;
+    }
+
+
+    .header-title > i {
+        width: 42px;
+        height: 42px;
+        font-size: 18px;
+    }
+
+
+    .header-title h1 {
+        font-size: 19px;
+    }
+
+
+    .header-title p {
+        font-size: 11px;
+    }
+
+
+    .upload-button {
+        width: 100%;
+    }
+
+}
