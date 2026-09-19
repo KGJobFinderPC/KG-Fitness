@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
@@ -11,6 +12,26 @@
 
     <url>
         <loc>https://kgjobfinderpc.github.io/KG-Fitness/home.html</loc>
+    </url>
+
+    <url>
+        <loc>https://kgjobfinderpc.github.io/KG-Fitness/exercises.html</loc>
+    </url>
+
+    <url>
+        <loc>https://kgjobfinderpc.github.io/KG-Fitness/nutrition.html</loc>
+    </url>
+
+    <url>
+        <loc>https://kgjobfinderpc.github.io/KG-Fitness/progress.html</loc>
+    </url>
+
+    <url>
+        <loc>https://kgjobfinderpc.github.io/KG-Fitness/workout.html</loc>
+    </url>
+
+    <url>
+        <loc>https://kgjobfinderpc.github.io/KG-Fitness/identify-machine.html</loc>
     </url>
 
 </urlset>
