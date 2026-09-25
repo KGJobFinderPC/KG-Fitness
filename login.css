@@ -31,7 +31,7 @@ body {
 
 /* =========================
    FITNESS SIDE IMAGES
-   PC - ORIGINAL SIZE
+   PC - NU SE SCHIMBA
 ========================= */
 
 .fitness-side {
@@ -46,16 +46,13 @@ body {
     background-repeat: no-repeat;
     background-position: center center;
     background-color: #080b14;
-
-    /* ONLY BRIGHTER */
-    filter: brightness(1.18);
 }
 
 .left-side {
     background-image:
         linear-gradient(
-            rgba(8, 11, 20, 0.16),
-            rgba(8, 11, 20, 0.68)
+            rgba(8, 11, 20, 0.25),
+            rgba(8, 11, 20, 0.82)
         ),
         url("images/fitness-left.jpg");
 }
@@ -63,16 +60,11 @@ body {
 .right-side {
     background-image:
         linear-gradient(
-            rgba(8, 11, 20, 0.16),
-            rgba(8, 11, 20, 0.68)
+            rgba(8, 11, 20, 0.25),
+            rgba(8, 11, 20, 0.82)
         ),
         url("images/fitness-right.jpg");
 }
-
-
-/* =========================
-   IMAGE OVERLAY
-========================= */
 
 .image-overlay {
     position: absolute;
@@ -419,6 +411,7 @@ body {
 
 /* =========================
    RESPONSIVE - TABLET
+   PC / TABLET ORIGINAL
 ========================= */
 
 @media (max-width: 1200px) {
@@ -438,7 +431,7 @@ body {
 
 
 /* =========================
-   RESPONSIVE - MOBILE
+   MOBILE ONLY
 ========================= */
 
 @media (max-width: 950px) {
@@ -454,9 +447,9 @@ body {
 
 
     /* =========================
-       MOBILE IMAGES
+       MOBILE PHOTO CONTAINER
        50% + 50%
-       ZERO GAP
+       NO GAP
     ========================= */
 
     .fitness-side {
@@ -469,24 +462,30 @@ body {
 
         padding: 0;
 
-        display: flex;
-        align-items: flex-end;
+        display: block;
 
-        background-size: cover;
+        /*
+           IMPORTANT:
+           The image itself is fitted to the
+           width of each half of the screen.
+           This keeps the person proportional.
+        */
+        background-size: 100% auto;
         background-repeat: no-repeat;
+
         background-color: #080b14;
 
         overflow: hidden;
 
-        /* brighter on mobile */
-        filter: brightness(1.25);
+        /* mobile brightness only */
+        filter: brightness(1.22);
 
         z-index: 5;
     }
 
 
     /* =========================
-       LEFT MOBILE
+       LEFT PHOTO
     ========================= */
 
     .left-side {
@@ -500,10 +499,10 @@ body {
         padding: 0;
 
         /*
-           Show upper body/head while
-           keeping most of the body visible.
+           Top of the original photo.
+           Keeps the head visible.
         */
-        background-position: center 28%;
+        background-position: center top;
 
         background-image:
             url("images/fitness-left.jpg");
@@ -511,7 +510,7 @@ body {
 
 
     /* =========================
-       RIGHT MOBILE
+       RIGHT PHOTO
     ========================= */
 
     .right-side {
@@ -525,10 +524,10 @@ body {
         padding: 0;
 
         /*
-           Show upper body/head while
-           keeping most of the body visible.
+           Top of the original photo.
+           Keeps the head visible.
         */
-        background-position: center 28%;
+        background-position: center top;
 
         background-image:
             url("images/fitness-right.jpg");
@@ -536,7 +535,7 @@ body {
 
 
     /* =========================
-       NO TEXT ON MOBILE
+       REMOVE TEXT
     ========================= */
 
     .fitness-side .side-content {
@@ -545,7 +544,7 @@ body {
 
 
     /* =========================
-       NO EXTRA OVERLAY
+       REMOVE EXTRA OVERLAY
     ========================= */
 
     .fitness-side .image-overlay {
@@ -554,7 +553,7 @@ body {
 
 
     /* =========================
-       LOGIN BELOW IMAGES
+       LOGIN BELOW PHOTOS
     ========================= */
 
     .login-center {
@@ -570,6 +569,7 @@ body {
         justify-content: center;
     }
 
+
     .login-card {
         width: 100%;
         max-width: 430px;
@@ -578,7 +578,7 @@ body {
 
 
 /* =========================
-   SMALL PHONES
+   SMALL PHONE
 ========================= */
 
 @media (max-width: 500px) {
@@ -592,14 +592,14 @@ body {
         height: 220px;
         min-height: 220px;
 
-        background-position: center 28%;
+        background-position: center top;
     }
 
     .right-side {
         height: 220px;
         min-height: 220px;
 
-        background-position: center 28%;
+        background-position: center top;
     }
 
     .login-center {
