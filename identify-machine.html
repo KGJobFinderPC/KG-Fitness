@@ -86,11 +86,14 @@
 
             <section class="intro-card">
 
-                <div class="intro-icon">
-
-                    <i class="fa-solid fa-camera"></i>
-
-                </div>
+                <button
+    type="button"
+    class="intro-icon"
+    id="openCameraButton"
+    aria-label="Open Camera"
+>
+    <i class="fa-solid fa-camera"></i>
+</button>
 
 
                 <h2>
@@ -140,12 +143,13 @@
                 </label>
 
 
-                <input
-                    type="file"
-                    id="machineImageInput"
-                    accept="image/*"
-                    hidden
-                >
+               <input
+    type="file"
+    id="machineImageInput"
+    accept="image/*"
+    capture="environment"
+    hidden
+>
 
 
                 <p class="upload-info">

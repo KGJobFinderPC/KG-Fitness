@@ -10,8 +10,19 @@ document.addEventListener(
         const imageInput =
             document.getElementById(
                 "machineImageInput"
+                
             );
+const openCameraButton =
+    document.getElementById(
+        "openCameraButton"
+    );
 
+openCameraButton.addEventListener(
+    "click",
+    () => {
+        imageInput.click();
+    }
+);
         const previewCard =
             document.getElementById(
                 "previewCard"
