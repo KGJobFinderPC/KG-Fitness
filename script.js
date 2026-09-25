@@ -546,6 +546,7 @@ document.addEventListener("DOMContentLoaded", () => {
                             {
  redirectTo:
     "https://kgjobfinderpc.github.io/KG-Fitness/reset-password.html"
+                            }
                         );
 
 
