@@ -34,16 +34,16 @@ body {
 ========================= */
 
 .fitness-side {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
     display: flex;
-    width: 100%;
-    height: 150px;
-    min-height: 150px;
-    padding: 15px 20px;
     align-items: flex-end;
+    padding: 55px;
 
     background-size: auto 100%;
-    background-position: center center;
     background-repeat: no-repeat;
+    background-position: center center;
     background-color: #080b14;
 }
 
@@ -409,7 +409,7 @@ body {
 
 
 /* =========================
-   RESPONSIVE
+   RESPONSIVE - TABLET
 ========================= */
 
 @media (max-width: 1200px) {
@@ -427,49 +427,89 @@ body {
     }
 }
 
+
+/* =========================
+   RESPONSIVE - MOBILE
+========================= */
+
 @media (max-width: 950px) {
 
     .login-page {
         display: flex;
         flex-direction: column;
         min-height: 100vh;
+        position: relative;
     }
 
+
     /* =========================
-       MOBILE FITNESS IMAGES
+       TWO FITNESS IMAGES
+       TOP OF MOBILE PAGE
     ========================= */
 
     .fitness-side {
+        position: absolute;
+        top: 0;
+
         display: flex;
+
         width: 50%;
         height: 150px;
         min-height: 150px;
-        padding: 15px;
+
+        padding: 0;
+
         align-items: flex-end;
 
         background-size: auto 100%;
         background-position: center center;
         background-repeat: no-repeat;
         background-color: #080b14;
+
+        overflow: hidden;
     }
+
+
+    /* =========================
+       LEFT IMAGE
+    ========================= */
 
     .left-side {
         display: flex;
-        position: absolute;
-        top: 0;
+
         left: 0;
+
         width: 50%;
         height: 150px;
+
+        padding: 0;
     }
+
+
+    /* =========================
+       RIGHT IMAGE
+    ========================= */
 
     .right-side {
         display: flex;
-        position: absolute;
-        top: 0;
+
         right: 0;
+
         width: 50%;
         height: 150px;
+
+        padding: 0;
     }
+
+
+    /* =========================
+       HIDE ALL IMAGE TEXT
+    ========================= */
+
+    .fitness-side .side-content {
+        display: none;
+    }
+
 
     /* =========================
        LOGIN CENTER
@@ -478,7 +518,9 @@ body {
     .login-center {
         width: 100%;
         min-height: auto;
+
         margin-top: 150px;
+
         padding: 30px 18px 40px;
 
         display: flex;
@@ -486,78 +528,27 @@ body {
         justify-content: center;
     }
 
+
+    /* =========================
+       LOGIN CARD
+    ========================= */
+
     .login-card {
         width: 100%;
         max-width: 430px;
-    }
-
-    /* =========================
-       IMAGE TEXT
-    ========================= */
-
-    .side-content {
-        max-width: 100%;
-    }
-
-    .side-content span {
-        font-size: 8px;
-        letter-spacing: 1.5px;
-    }
-
-    .side-content h2 {
-        font-size: 17px;
-        line-height: 1.1;
-    }
-
-    .side-content p {
-        display: none;
     }
 }
-    /* =========================
-       MOBILE LOGIN
-    ========================= */
 
-    .login-center {
-        order: 2;
 
-        width: 100%;
-        min-height: auto;
-        padding: 30px 18px 40px;
-
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-    }
-
-    .login-card {
-        width: 100%;
-        max-width: 430px;
-    }
-
-    /* =========================
-       MOBILE IMAGE TEXT
-    ========================= */
-
-    .side-content {
-        max-width: 100%;
-    }
-
-    .side-content span {
-        font-size: 9px;
-        letter-spacing: 2px;
-    }
-
-    .side-content h2 {
-        font-size: 24px;
-        line-height: 1.1;
-    }
-
-    .side-content p {
-        display: none;
-    }
-
+/* =========================
+   RESPONSIVE - SMALL PHONE
+========================= */
 
 @media (max-width: 500px) {
+
+    .login-center {
+        padding: 25px 14px 35px;
+    }
 
     .login-card {
         padding: 34px 22px;
