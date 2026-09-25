@@ -336,15 +336,43 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
                     submitButton.textContent =
-                        "SUCCESS";
+    "SUCCESS";
 
 
-                    setTimeout(() => {
+// ===============================
+// SEND NEW LOGIN NOTIFICATION
+// ===============================
 
-                        window.location.href =
-                            "dashboard.html";
+try {
 
-                    }, 1000);
+    await supabase.functions.invoke(
+        "resend-email"
+    );
+
+    console.log(
+        "Login notification email sent."
+    );
+
+} catch (notificationError) {
+
+    console.error(
+        "Login notification failed:",
+        notificationError
+    );
+
+}
+
+
+// ===============================
+// REDIRECT TO DASHBOARD
+// ===============================
+
+setTimeout(() => {
+
+    window.location.href =
+        "dashboard.html";
+
+}, 1000);
 
                 }
 
