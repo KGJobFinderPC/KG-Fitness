@@ -41,46 +41,29 @@ body {
     align-items: flex-end;
     padding: 55px;
 
-    background-size: cover;
+    background-size: auto 100%;
     background-repeat: no-repeat;
     background-position: center center;
     background-color: #080b14;
-
-    filter: brightness(1.15);
 }
-
-
-/* =========================
-   LEFT IMAGE
-========================= */
 
 .left-side {
     background-image:
         linear-gradient(
-            rgba(8, 11, 20, 0.08),
-            rgba(8, 11, 20, 0.35)
+            rgba(8, 11, 20, 0.25),
+            rgba(8, 11, 20, 0.82)
         ),
         url("images/fitness-left.jpg");
 }
 
-
-/* =========================
-   RIGHT IMAGE
-========================= */
-
 .right-side {
     background-image:
         linear-gradient(
-            rgba(8, 11, 20, 0.08),
-            rgba(8, 11, 20, 0.35)
+            rgba(8, 11, 20, 0.25),
+            rgba(8, 11, 20, 0.82)
         ),
         url("images/fitness-right.jpg");
 }
-
-
-/* =========================
-   IMAGE OVERLAY
-========================= */
 
 .image-overlay {
     position: absolute;
@@ -88,16 +71,11 @@ body {
     background:
         linear-gradient(
             135deg,
-            rgba(111, 55, 180, 0.08),
-            rgba(255, 216, 77, 0.05)
+            rgba(111, 55, 180, 0.12),
+            rgba(255, 216, 77, 0.08)
         );
     pointer-events: none;
 }
-
-
-/* =========================
-   SIDE CONTENT
-========================= */
 
 .side-content {
     position: relative;
@@ -144,11 +122,6 @@ body {
         ),
         #080b14;
 }
-
-
-/* =========================
-   LOGIN CARD
-========================= */
 
 .login-card {
     width: 100%;
@@ -472,23 +445,22 @@ body {
 
 
     /* =========================
-       TWO FITNESS IMAGES
-       FULL WIDTH
-       NO GAP
+       MOBILE IMAGE AREA
+       LARGE + FULL WIDTH
+       ZERO GAP
     ========================= */
 
     .fitness-side {
         position: absolute;
         top: 0;
 
-        display: flex;
-
         width: 50%;
-        height: 200px;
-        min-height: 200px;
+        height: 220px;
+        min-height: 220px;
 
         padding: 0;
 
+        display: flex;
         align-items: flex-end;
 
         background-size: cover;
@@ -497,76 +469,57 @@ body {
 
         overflow: hidden;
 
-        filter: brightness(1.18);
+        /* brighter ONLY on mobile */
+        filter: brightness(1.25);
+
+        z-index: 5;
     }
 
 
     /* =========================
-       LEFT IMAGE
+       LEFT MOBILE IMAGE
     ========================= */
 
     .left-side {
-        display: flex;
-
         left: 0;
         right: auto;
 
         width: 50%;
-        height: 200px;
-        min-height: 200px;
+        height: 220px;
+        min-height: 220px;
 
         padding: 0;
 
         background-position: center center;
+
+        background-image:
+            url("images/fitness-left.jpg");
     }
 
 
     /* =========================
-       RIGHT IMAGE
+       RIGHT MOBILE IMAGE
     ========================= */
 
     .right-side {
-        display: flex;
-
         right: 0;
         left: auto;
 
         width: 50%;
-        height: 200px;
-        min-height: 200px;
+        height: 220px;
+        min-height: 220px;
 
         padding: 0;
 
         background-position: center center;
-    }
 
-
-    /* =========================
-       MOBILE IMAGE BRIGHTNESS
-       NO DARK BAND
-    ========================= */
-
-    .left-side {
         background-image:
-            linear-gradient(
-                rgba(8, 11, 20, 0.02),
-                rgba(8, 11, 20, 0.08)
-            ),
-            url("images/fitness-left.jpg");
-    }
-
-    .right-side {
-        background-image:
-            linear-gradient(
-                rgba(8, 11, 20, 0.02),
-                rgba(8, 11, 20, 0.08)
-            ),
             url("images/fitness-right.jpg");
     }
 
 
     /* =========================
-       REMOVE ALL IMAGE TEXT
+       REMOVE MOBILE TEXT
     ========================= */
 
     .fitness-side .side-content {
@@ -575,7 +528,7 @@ body {
 
 
     /* =========================
-       REMOVE OVERLAY ON MOBILE
+       REMOVE MOBILE OVERLAY
     ========================= */
 
     .fitness-side .image-overlay {
@@ -584,14 +537,14 @@ body {
 
 
     /* =========================
-       LOGIN CENTER
+       LOGIN BELOW IMAGES
     ========================= */
 
     .login-center {
         width: 100%;
         min-height: auto;
 
-        margin-top: 200px;
+        margin-top: 220px;
 
         padding: 30px 18px 40px;
 
@@ -601,10 +554,6 @@ body {
     }
 
 
-    /* =========================
-       LOGIN CARD
-    ========================= */
-
     .login-card {
         width: 100%;
         max-width: 430px;
@@ -613,28 +562,29 @@ body {
 
 
 /* =========================
-   RESPONSIVE - SMALL PHONE
+   SMALL PHONES
 ========================= */
 
 @media (max-width: 500px) {
 
+    /* larger mobile image strip */
     .fitness-side {
-        height: 180px;
-        min-height: 180px;
+        height: 220px;
+        min-height: 220px;
     }
 
     .left-side {
-        height: 180px;
-        min-height: 180px;
+        height: 220px;
+        min-height: 220px;
     }
 
     .right-side {
-        height: 180px;
-        min-height: 180px;
+        height: 220px;
+        min-height: 220px;
     }
 
     .login-center {
-        margin-top: 180px;
+        margin-top: 220px;
         padding: 25px 14px 35px;
     }
 
