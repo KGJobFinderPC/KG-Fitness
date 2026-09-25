@@ -433,15 +433,41 @@ body {
 
     .login-page {
         grid-template-columns: 1fr;
+        grid-template-rows: 180px auto 180px;
     }
 
     .fitness-side {
-        display: none;
+        display: flex;
+        min-height: 180px;
+        padding: 25px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .left-side {
+        grid-row: 1;
     }
 
     .login-center {
-        min-height: 100vh;
+        grid-row: 2;
+        min-height: auto;
         padding: 25px 18px;
+    }
+
+    .right-side {
+        grid-row: 3;
+    }
+
+    .side-content {
+        max-width: 100%;
+    }
+
+    .side-content h2 {
+        font-size: 25px;
+    }
+
+    .side-content p {
+        font-size: 12px;
     }
 }
 
