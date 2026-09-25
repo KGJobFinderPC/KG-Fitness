@@ -545,8 +545,7 @@ document.addEventListener("DOMContentLoaded", () => {
                             email,
                             {
  redirectTo:
-    "http://127.0.0.1:5500/reset-password.html"
-                            }
+    "https://kgjobfinderpc.github.io/KG-Fitness/reset-password.html"
                         );
 
 
