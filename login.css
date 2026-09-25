@@ -433,9 +433,7 @@ body {
         display: flex;
         flex-direction: column;
         min-height: 100vh;
-        position: relative;
     }
-
 
     /* =========================
        MOBILE FITNESS IMAGES
@@ -443,16 +441,10 @@ body {
 
     .fitness-side {
         display: flex;
-        position: absolute;
-
-        top: 0;
-
         width: 50%;
         height: 150px;
         min-height: 150px;
-
-        padding: 10px;
-
+        padding: 15px;
         align-items: flex-end;
 
         background-size: auto 100%;
@@ -461,40 +453,43 @@ body {
         background-color: #080b14;
     }
 
-
-    /* =========================
-       LEFT IMAGE
-    ========================= */
-
     .left-side {
         display: flex;
-
+        position: absolute;
+        top: 0;
         left: 0;
-
         width: 50%;
         height: 150px;
-
-        padding-left: 0;
-        padding-right: 0;
     }
-
-
-    /* =========================
-       RIGHT IMAGE
-    ========================= */
 
     .right-side {
         display: flex;
-
+        position: absolute;
+        top: 0;
         right: 0;
-
         width: 50%;
         height: 150px;
-
-        padding-left: 0;
-        padding-right: 0;
     }
 
+    /* =========================
+       LOGIN CENTER
+    ========================= */
+
+    .login-center {
+        width: 100%;
+        min-height: auto;
+        margin-top: 150px;
+        padding: 30px 18px 40px;
+
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .login-card {
+        width: 100%;
+        max-width: 430px;
+    }
 
     /* =========================
        IMAGE TEXT
@@ -502,7 +497,6 @@ body {
 
     .side-content {
         max-width: 100%;
-        margin-bottom: 3px;
     }
 
     .side-content span {
@@ -511,29 +505,23 @@ body {
     }
 
     .side-content h2 {
-        font-size: 9px;
+        font-size: 17px;
         line-height: 1.1;
-        margin-top: 4px;
     }
 
     .side-content p {
         display: none;
     }
-
-
+}
     /* =========================
-       LOGIN CENTER
+       MOBILE LOGIN
     ========================= */
 
     .login-center {
         order: 2;
 
         width: 100%;
-
         min-height: auto;
-
-        margin-top: 150px;
-
         padding: 30px 18px 40px;
 
         display: flex;
@@ -541,16 +529,33 @@ body {
         justify-content: center;
     }
 
-
-    /* =========================
-       LOGIN CARD
-    ========================= */
-
     .login-card {
         width: 100%;
         max-width: 430px;
     }
-}
+
+    /* =========================
+       MOBILE IMAGE TEXT
+    ========================= */
+
+    .side-content {
+        max-width: 100%;
+    }
+
+    .side-content span {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+    .side-content h2 {
+        font-size: 24px;
+        line-height: 1.1;
+    }
+
+    .side-content p {
+        display: none;
+    }
+
 
 @media (max-width: 500px) {
 
