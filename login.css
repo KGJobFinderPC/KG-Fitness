@@ -41,29 +41,46 @@ body {
     align-items: flex-end;
     padding: 55px;
 
-    background-size: auto 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     background-color: #080b14;
+
+    filter: brightness(1.15);
 }
+
+
+/* =========================
+   LEFT IMAGE
+========================= */
 
 .left-side {
     background-image:
         linear-gradient(
-            rgba(8, 11, 20, 0.25),
-            rgba(8, 11, 20, 0.82)
+            rgba(8, 11, 20, 0.08),
+            rgba(8, 11, 20, 0.35)
         ),
         url("images/fitness-left.jpg");
 }
 
+
+/* =========================
+   RIGHT IMAGE
+========================= */
+
 .right-side {
     background-image:
         linear-gradient(
-            rgba(8, 11, 20, 0.25),
-            rgba(8, 11, 20, 0.82)
+            rgba(8, 11, 20, 0.08),
+            rgba(8, 11, 20, 0.35)
         ),
         url("images/fitness-right.jpg");
 }
+
+
+/* =========================
+   IMAGE OVERLAY
+========================= */
 
 .image-overlay {
     position: absolute;
@@ -71,11 +88,16 @@ body {
     background:
         linear-gradient(
             135deg,
-            rgba(111, 55, 180, 0.12),
-            rgba(255, 216, 77, 0.08)
+            rgba(111, 55, 180, 0.08),
+            rgba(255, 216, 77, 0.05)
         );
     pointer-events: none;
 }
+
+
+/* =========================
+   SIDE CONTENT
+========================= */
 
 .side-content {
     position: relative;
@@ -122,6 +144,11 @@ body {
         ),
         #080b14;
 }
+
+
+/* =========================
+   LOGIN CARD
+========================= */
 
 .login-card {
     width: 100%;
@@ -437,14 +464,17 @@ body {
     .login-page {
         display: flex;
         flex-direction: column;
+        width: 100%;
         min-height: 100vh;
         position: relative;
+        overflow-x: hidden;
     }
 
 
     /* =========================
        TWO FITNESS IMAGES
-       TOP OF MOBILE PAGE
+       FULL WIDTH
+       NO GAP
     ========================= */
 
     .fitness-side {
@@ -454,19 +484,20 @@ body {
         display: flex;
 
         width: 50%;
-        height: 150px;
-        min-height: 150px;
+        height: 200px;
+        min-height: 200px;
 
         padding: 0;
 
         align-items: flex-end;
 
-        background-size: auto 100%;
-        background-position: center center;
+        background-size: cover;
         background-repeat: no-repeat;
         background-color: #080b14;
 
         overflow: hidden;
+
+        filter: brightness(1.18);
     }
 
 
@@ -478,11 +509,15 @@ body {
         display: flex;
 
         left: 0;
+        right: auto;
 
         width: 50%;
-        height: 150px;
+        height: 200px;
+        min-height: 200px;
 
         padding: 0;
+
+        background-position: center center;
     }
 
 
@@ -494,19 +529,56 @@ body {
         display: flex;
 
         right: 0;
+        left: auto;
 
         width: 50%;
-        height: 150px;
+        height: 200px;
+        min-height: 200px;
 
         padding: 0;
+
+        background-position: center center;
     }
 
 
     /* =========================
-       HIDE ALL IMAGE TEXT
+       MOBILE IMAGE BRIGHTNESS
+       NO DARK BAND
+    ========================= */
+
+    .left-side {
+        background-image:
+            linear-gradient(
+                rgba(8, 11, 20, 0.02),
+                rgba(8, 11, 20, 0.08)
+            ),
+            url("images/fitness-left.jpg");
+    }
+
+    .right-side {
+        background-image:
+            linear-gradient(
+                rgba(8, 11, 20, 0.02),
+                rgba(8, 11, 20, 0.08)
+            ),
+            url("images/fitness-right.jpg");
+    }
+
+
+    /* =========================
+       REMOVE ALL IMAGE TEXT
     ========================= */
 
     .fitness-side .side-content {
+        display: none;
+    }
+
+
+    /* =========================
+       REMOVE OVERLAY ON MOBILE
+    ========================= */
+
+    .fitness-side .image-overlay {
         display: none;
     }
 
@@ -519,7 +591,7 @@ body {
         width: 100%;
         min-height: auto;
 
-        margin-top: 150px;
+        margin-top: 200px;
 
         padding: 30px 18px 40px;
 
@@ -546,7 +618,23 @@ body {
 
 @media (max-width: 500px) {
 
+    .fitness-side {
+        height: 180px;
+        min-height: 180px;
+    }
+
+    .left-side {
+        height: 180px;
+        min-height: 180px;
+    }
+
+    .right-side {
+        height: 180px;
+        min-height: 180px;
+    }
+
     .login-center {
+        margin-top: 180px;
         padding: 25px 14px 35px;
     }
 
