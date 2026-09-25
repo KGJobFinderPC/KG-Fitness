@@ -427,7 +427,6 @@ body {
     }
 }
 
-
 @media (max-width: 950px) {
 
     .login-page {
@@ -437,33 +436,83 @@ body {
     }
 
     /* =========================
-       MOBILE FITNESS IMAGE
+       MOBILE FITNESS IMAGES
     ========================= */
 
     .fitness-side {
         display: flex;
-        width: 100%;
-        height: 300px;
-        min-height: 300px;
-        padding: 20px;
+        width: 50%;
+        height: 150px;
+        min-height: 150px;
+        padding: 15px;
         align-items: flex-end;
 
         background-size: auto 100%;
         background-position: center center;
         background-repeat: no-repeat;
+        background-color: #080b14;
     }
 
-    /* Show only the left image on mobile */
     .left-side {
         display: flex;
-        order: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 150px;
     }
 
-    /* Hide the second image on mobile */
     .right-side {
+        display: flex;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 150px;
+    }
+
+    /* =========================
+       LOGIN CENTER
+    ========================= */
+
+    .login-center {
+        width: 100%;
+        min-height: auto;
+        margin-top: 150px;
+        padding: 30px 18px 40px;
+
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .login-card {
+        width: 100%;
+        max-width: 430px;
+    }
+
+    /* =========================
+       IMAGE TEXT
+    ========================= */
+
+    .side-content {
+        max-width: 100%;
+    }
+
+    .side-content span {
+        font-size: 8px;
+        letter-spacing: 1.5px;
+    }
+
+    .side-content h2 {
+        font-size: 17px;
+        line-height: 1.1;
+    }
+
+    .side-content p {
         display: none;
     }
-
+}
     /* =========================
        MOBILE LOGIN
     ========================= */
@@ -506,7 +555,7 @@ body {
     .side-content p {
         display: none;
     }
-}
+
 
 @media (max-width: 500px) {
 
